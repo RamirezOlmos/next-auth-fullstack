@@ -1,7 +1,6 @@
 "use client"
 
-import { useEffect, useState, useRef } from 'react';
-import { getCharacter } from 'rickmortyapi';
+import { useEffect, useState } from 'react';
 
 interface Character {
   id: number
@@ -9,15 +8,11 @@ interface Character {
   status: string;
 }
 
-const getCharactersFromApi = async () => {
-  const theSmiths = await getCharacter([2, 3, 4, 5]);
-  return theSmiths;
-}
 
 
 const ShowCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
-  const [data, setData] = useState<any>([])
+
 
 
   useEffect(() => {
@@ -35,19 +30,13 @@ const ShowCharacters = () => {
       }
     };
 
-    const getCharactersFromApi = async () => {
-      const theSmiths = await getCharacter([2, 3, 4, 5]);
-      setData(theSmiths);
-    }
-
     getCharacters();
   }, []);
 
-  console.log(data);
 
 
   return (
-    <div className="flex flex-wrap gap-5">
+    <div className="flex flex-col gap-5">
       {
         characters.map((character) => {
           return (
