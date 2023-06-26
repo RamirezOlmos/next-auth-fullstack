@@ -20,6 +20,7 @@ export async function makeQuery({ query,
     dbconnection.end();
     return results;
   } catch (error: any) {
+    console.error("Error executing database query:", error);
     throw new Error(error.code);
   }
 }
