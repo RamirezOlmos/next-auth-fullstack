@@ -30,7 +30,7 @@ pnpm dev
 ```
 
 
-To seed database with five characters from Rick and Morty (the Smith family) go to the rest api http://localhost:3000/api/seed
+To seed database with five characters from Rick and Morty (the Smith family) go to the rest api http://localhost:3000/api/seed.
 
 
 
