@@ -5,7 +5,6 @@ interface RequestBody {
   status: string;
 }
 
-
 export async function POST(request: Request) {
   const body: RequestBody = await request.json();
 
